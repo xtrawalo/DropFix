@@ -167,7 +167,7 @@ section {
 }
 
 .details-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -193,7 +193,7 @@ section {
 }
 
 .features-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -211,18 +211,10 @@ section {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(5, 1fr); /* 4 equal columns */
+  grid-template-rows: repeat(6, 100px); /* you can adjust height per row */
   gap: 1.5rem;
   margin-top: 6rem;
-  grid-auto-rows: 180px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* single layout for all screens */
-  gap: 1.5rem;
-  margin-top: 6rem;
-  grid-auto-rows: 220px;
 }
 
 .feature-card {
@@ -249,48 +241,57 @@ section {
   z-index: 10;
   padding: 1.25rem;
   margin-top: auto;
-  color: white;
-}
-
-.feature-card .badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.25rem 0.5rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  color: #F7F7F7;
 }
 
 .feature-card h2 {
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1.2;
-}
-
-.feature-card .label {
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  color: #4ade80; /* emerald */
-  letter-spacing: 0.2em;
+  color: #F7F7F7;
 }
 
 /* Card positions in grid */
-.feature-card.pressure { grid-area: 1 / 1 / span 2 / span 4; }
-.feature-card.battery { grid-area: 1 / 5 / span 2 / span 2; }
-.feature-card.app { grid-area: 3 / 1 / span 2 / span 2; }
-.feature-card.piezo { grid-area: 3 / 3 / span 2 / span 4; }
+.feature-card.pressure { grid-area: 1 / 1 / span 3 / span 3; }
+.feature-card.battery { grid-area: 1 / 4 / span 3 / span 2; }
+.feature-card.app { grid-area: 4 / 1 / span 3 / span 2; }
+.feature-card.piezo { grid-area: 4 / 3 / span 3 / span 3; }
 
 /* Gradient overlay */
 .feature-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 255, 255, 0.1), transparent);
+  background: linear-gradient(to bottom, rgba(13, 13, 13, 0.1), transparent);
   z-index: 5;
 }
 
+/*Download section*/
+
 .download {
+    background-color: #0d0d0d;  
+    color: #F7F7F7;
+    text-align: center;
+}
+
+.download-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.download h2 {
+    color: #66ff99;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.download p {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.download-button {
     padding: 12px 24px;      
     background-color: #F7F7F7;   
     color: #0d0d0d;        
@@ -304,7 +305,7 @@ section {
     text-align: center;
 }
 
-.download:hover {
+.download-button:hover {
     background-color: #e0e0e0;  
     transform: scale(1.05); 
 }
@@ -319,7 +320,7 @@ section {
 }
 
 .FAQ-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -410,7 +411,7 @@ section {
 }
 
 .Pricing-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -443,6 +444,16 @@ section {
 .buy-button:hover {
     background-color: #e0e0e0;  
     transform: scale(1.05); 
+}
+
+.buy-button a {
+    color: #0d0d0d;
+    text-decoration: none;
+    display: block;
+}
+
+.buy-button a:hover {
+    color: #0d0d0d;
 }
 
 /*contact-section*/
@@ -497,26 +508,7 @@ section {
 }
 
 /*responsive-css*/
-@media(max-width:890px){
-    header{
-        padding: 20px 3%;
-        transition: .4s;
-    }
-}
-@media(max-width:630px){
-    .main-text h1{
-        font-size: 50px;
-        transition: .4s;
-    }
-    .main-text p{
-        font-size: 18px;
-        transition: .4s;
-    }
-    .main-btn{
-        padding: 10px 20px;
-        transition: .4s;
-    }
-}
+
 @media(max-width:750px){
     .navmenu{
         position: absolute;
@@ -525,8 +517,8 @@ section {
         width: 300px;
         height: 130vh;
         background-color: rgba(13, 13, 13, 0.9);
-        backdrop-filter: blur(10px); /* adds the blur effect */
-        -webkit-backdrop-filter: blur(10px); /* for Safari support */
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -540,4 +532,106 @@ section {
     .navmenu.open{
         right: 0;
     }
+}
+
+@media(max-width: 800px){
+    .details {
+        padding: 30px 15px;  
+    }
+    .details-container {
+        max-width: 100%;    
+        margin: 0 auto;
+    }
+    .details h2 {
+        font-size: 1.2rem;   
+        margin-bottom: 10px;
+    }
+    .details p {
+        font-size: 1.5rem; 
+        line-height: 1.4; 
+    }
+
+    .features {
+        padding: 30px 15px;  
+    }
+    .features-container {
+        max-width: 100%;    
+        margin: 0 auto;
+    }
+    .features h2 {
+        font-size: 1.2rem;   
+        margin-bottom: 10px;
+    }
+    .features p {
+        font-size: 1.5rem; 
+        line-height: 1.4; 
+    }
+    
+    .FAQ {
+        padding: 30px 15px;  
+    }
+    .FAQ-container {
+        max-width: 100%;    
+        margin: 0 auto;
+    }
+    .FAQ h2 {
+        font-size: 1.2rem;   
+        margin-bottom: 10px;
+    }
+    .FAQ p {
+        font-size: 1.5rem; 
+        line-height: 1.4; 
+    }
+    
+    .Pricing {
+        padding: 30px 15px;  
+    }
+    .Pricing-container {
+        max-width: 100%;    
+        margin: 0 auto;
+    }
+    .Pricing h2 {
+        font-size: 1.2rem;   
+        margin-bottom: 10px;
+    }
+    .Pricing p {
+        font-size: 1.5rem; 
+        line-height: 1.4; 
+    }
+    
+    .download {
+        padding: 30px 15px;  
+    }
+    .download-container {
+        max-width: 100%;    
+        margin: 0 auto;
+    }
+    .download h2 {
+        font-size: 1.2rem;   
+        margin-bottom: 10px;
+    }
+    .download p {
+        font-size: 1.5rem; 
+        line-height: 1.4; 
+    }
+}
+
+@media (max-width: 1000px) {
+  .features-grid {
+    grid-template-columns: 1fr;      
+    grid-template-rows: auto;       
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    grid-area: auto !important;
+    aspect-ratio: 1 / 1;            
+    position: relative;
+  }
+
+  .feature-card img {
+    width: 100%;
+    height: 100%;                    
+    object-fit: cover;               
+  }
 }
