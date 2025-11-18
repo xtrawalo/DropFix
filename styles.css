@@ -635,3 +635,35 @@ section {
     object-fit: cover;               
   }
 }
+
+@media (max-width: 500px) {
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-areas: 
+            "logo first-info"
+            "second-info third-info";
+        gap: 1.5rem;
+    }
+
+    .contact-logo {
+        grid-area: logo;
+        justify-self: start;
+    }
+
+    .first-info {
+        grid-area: first-info;
+    }
+
+    .second-info {
+        grid-area: second-info;
+    }
+
+    .third-info {
+        grid-area: third-info;
+    }
+
+    .contact-logo img {
+        width: 100px; /* adjust logo size for small screens */
+    }
+}
