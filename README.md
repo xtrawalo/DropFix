@@ -33,7 +33,7 @@ The product's features :
 
 <img src="Assets/Screenshots/Features1.png">
 
-<img src="Assets/Screenshots/Features2.png">
+<img src="Assets/Screenshots/Features.png">
 
 ### Mobile App
 
