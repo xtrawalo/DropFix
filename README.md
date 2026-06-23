@@ -1,4 +1,4 @@
-<h1 align="center">Dropfix Website in HTML & CSS</h1>
+<h1 align="center">Dropfix : Website in HTML & CSS</h1>
 <p align="center">
 <img src="Assets/Screenshots/Home.png">
 A responsive one-page website that sells a product called DropFix by highlighting it's features and pricing.
