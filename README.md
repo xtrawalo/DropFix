@@ -1,9 +1,23 @@
-
-# DropFix
-
+<h1 align="center">Dropfix Website in HTML & CSS</h1>
+<p align="center">
+<img src="Assets/Screenshots/Home.png">
 A responsive one-page website that sells a product called DropFix by highlighting it's features and pricing.
+</p>
 
 **Note :** DropFix is not a real product.
+
+## Table of content
+
+- [Demo](#demo)
+- [About The Project](#about-the-project)
+  - [Home Page](#home-page)
+  - [Product Overview](#product-overview)
+  - [Features](#features)
+  - [Mobile App](#mobile-app)
+  - [FAQ](#faq)
+  - [Pricing](#pricing)
+- [Tech Stack](#tech-stack)
+- [Author](#author)
 
 ## Demo
 
