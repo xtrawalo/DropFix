@@ -70,9 +70,8 @@ The price of Dropfix and a button to purchase it.
 
 ## Tech Stack
 
-- HTML
-- CSS
-- JavaScript
+- HTML & CSS
+- Minimal JavaScript
 
 ## Author
 
